@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MovieModel } from "./movie-model";
+import { MoviesService} from "./movies.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+ movieModel:MovieModel[];
+ constructor(private movieDataService: MoviesService){};
+ ngOnInit(){
+
+ 	this.movieModel = this.movieDataService.getMovieList();
+ }
 }
