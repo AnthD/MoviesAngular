@@ -9,9 +9,19 @@ import { MoviesService} from "./movies.service";
 })
 export class AppComponent {
  movieModel:MovieModel[];
- constructor(private movieDataService: MoviesService){};
- ngOnInit(){
 
- 	this.movieModel = this.movieDataService.getMovieList();
+ constructor(private movieDataService: MoviesService){};
+
+ ngOnInit(){
+ 	 
+
+ 	//this.movieModel = 
+
+ 	return this.movieDataService.getMovieList()
+ 		.subscribe(MovieModel => this.movieModel = MovieModel);
  }
-}
+
+ //  if(Array.isArray(this.movieModel)){
+ 	
+ }
+

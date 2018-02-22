@@ -1,6 +1,9 @@
-import { MovieModel } from "./movie-model";
-  export const MoviesList: MovieModel[] =[{
- 
+{
+
+"data":[
+	{
+
+		
 	  "id":1,
 	  "title": "Shaw Shank Redemption ",
 	  "description": "This a Film decription",
@@ -41,4 +44,8 @@ import { MovieModel } from "./movie-model";
 	  "description": "This is Schindlers List",
 	  "movieImage": "../assets/schindlerslist.jpg"
 
-  }]
+  }
+
+]
+
+}
