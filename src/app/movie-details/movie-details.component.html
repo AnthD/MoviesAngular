@@ -1,0 +1,28 @@
+<p>
+  movie-details works!
+</p>
+<!-- <p *ngIf="movieModel">{{movieModel.title}}</p> -->
+
+<ng-container *ngIf="movieModel" class="row">
+<div class="card col-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-12"><h1>
+    Film title: {{ movieModel.title }}
+  </h1>
+</div>
+
+<div class="col-12 col-md-6">
+	<img class="image-fluid" alt="image poster" [src]="movieModel.movieImage">
+</div>			 
+    
+<div class="col-12 col-md-6">
+  
+  <p class="movieShortDesc">{{movieModel.description}}</p>
+</div>
+
+		</div>
+	</div>
+</div>
+ 
+</ng-container>

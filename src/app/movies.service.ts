@@ -16,4 +16,8 @@ constructor(private _http:Http){}
   				.map(response => <MovieModel[]> response.json().data);
   }
 
+  getMovie(id:number){
+  	return this._http.get(this._url)
+  				.map(response => <MovieModel> response.json().data[id]);
+  }
 }

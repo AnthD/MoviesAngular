@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { MovieModel } from "./movie-model";
-import { MoviesService} from "./movies.service";
+import { RouterModule } from '@angular/router';
+
+// import { MovieModel } from "./movie-model";
+// import { MoviesService} from "./movies.service";
 
 @Component({
   selector: 'app-root',
@@ -8,20 +10,21 @@ import { MoviesService} from "./movies.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- movieModel:MovieModel[];
 
- constructor(private movieDataService: MoviesService){};
+ // movieModel:MovieModel[];
 
- ngOnInit(){
+ // constructor(private movieDataService: MoviesService){};
+
+ // ngOnInit(){
  	 
 
- 	//this.movieModel = 
+ // 	//this.movieModel = 
 
- 	return this.movieDataService.getMovieList()
- 		.subscribe(MovieModel => this.movieModel = MovieModel);
+ // 	return this.movieDataService.getMovieList()
+ // 		.subscribe(MovieModel => this.movieModel = MovieModel);
  }
 
  //  if(Array.isArray(this.movieModel)){
  	
- }
+
 

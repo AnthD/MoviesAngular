@@ -3,12 +3,19 @@
  
 -->
 
-<div style="text-align:center" *ngFor="let item of movieModel">
+<!-- <div class="card" *ngFor="let item of movieModel">
   <h1>
     Film title: {{ item.title }}
   </h1>
+  <a >
   <img width="300" alt="Angular Logo" [src]="item.movieImage">
+  </a>
   <p class="movieShortDesc">{{item.description}}</p>
+</div>-->
+<div class="container"> 
+  <router-outlet>
+    
+  </router-outlet>
 </div>
 
 
