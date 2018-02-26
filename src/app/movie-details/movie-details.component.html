@@ -7,22 +7,31 @@
 <div class="card col-12">
 	<div class="container">
 		<div class="row">
-			<div class="col-12"><h1>
+			<div class="col-12 ">
+				<h1 class="movietitle">
     Film title: {{ movieModel.title }}
   </h1>
 </div>
 
-<div class="col-12 col-md-6">
+<div class="col-12 col-md-6 d-flex movie-img-c">
 	<img class="image-fluid" alt="image poster" [src]="movieModel.movieImage">
 </div>			 
     
-<div class="col-12 col-md-6">
+<div class="col-12 col-md-6 d-fex movie-desc-c">
   
   <p class="movieShortDesc">{{movieModel.description}}</p>
 </div>
 
 		</div>
+
+
+
 	</div>
+
+</div>
+
+	<div class=" p-2">
+	<a class="btn btn-primary" [routerLink]="['/movies']"> Back to movie list </a>
 </div>
  
 </ng-container>

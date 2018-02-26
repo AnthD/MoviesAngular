@@ -9,23 +9,23 @@ import { MoviesService} from "../movies.service";
 })
 export class MovieListComponent implements OnInit {
 
-	 movieModel:MovieModel[];
+//Declared an array of movieModel objects
+	 movieModel:MovieModel[]; //--TEST THAT YOU ARE GETTING A MOVIE MODEL DATA
 
- constructor(private movieDataService: MoviesService){};
+//Declared an error message property that accepts any
+	  myErrorMessage:any; //-- TEST FOR ERROR MESSAGE 
+//constructor is decalaring my dependency movieDataService object 
+	 constructor(private movieDataService: MoviesService){};
 
- ngOnInit(){
- 	 
+	 ngOnInit(){
+//on ngInit i subscribe to my movieDataservice object and i'm expecting 
+// a returned list of service data matching my movieModel object
+// else we get error  plwhich is then stored in my error message property
+	 	return this.movieDataService.getMovieList() 
+	 		.subscribe(MovieModel => this.movieModel = MovieModel,
+	 			 error => this.myErrorMessage = error
+	 			);
+	 }
 
- 	//this.movieModel = 
-
-
- 	return this.movieDataService.getMovieList()
- 		.subscribe(MovieModel => this.movieModel = MovieModel);
- }
-
-  // constructor() { }
-
-  // ngOnInit() {
-  // }
 
 }

@@ -3,14 +3,13 @@
 <div class="container">
 				<div class="row">
 
-
 			<div class="col-12 col-md-6 col-lg-4 card" *ngFor="let item of movieModel">
 		
-	<div class="col-12">
-  <h1>
+	<div class="col-12 p-5">
+  <h1 class="movie_title text-center">
     Film title: {{ item.title }}
   </h1>
-  <a [routerLink]="['movie-details', item.id]">
+  <a [routerLink]="['movie-details', item.id]" class="d-flex justify-content-center">
   <img max-width="20vw" alt="Angular Logo" [src]="item.movieImage">
   </a>
 

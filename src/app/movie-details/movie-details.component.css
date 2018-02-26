@@ -1,0 +1,23 @@
+
+.movietitle{
+text-align:center;
+}
+.movie-img-c{
+	    justify-content: center;
+   
+    padding: 5px;
+}
+
+.movie-desc-c{
+	    text-align: center;
+    
+}
+
+
+
+@media (min-width: 768px) {
+ 	.movie-img-c{
+
+	 border-right: 2px solid #eee;
+	}
+ }
